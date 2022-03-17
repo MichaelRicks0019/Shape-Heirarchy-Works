@@ -8,15 +8,32 @@ namespace Shape_Heirarchy
 {
     class Cube : ThreeDimensionalShape
     {
-        private double length;
-        private double width;
-        private double height;
+        private double cubeSide;
 
-        public Cube(double length, double width, double height)
+
+        public Cube(double cubeSide)
         {
-            this.length = length;
-            this.width = width;
-            this.height = height;
-    }
+            this.cubeSide = cubeSide;
+        }
+        public override double Volume
+        {
+            get
+            {
+                base.volume = Math.Pow(cubeSide, 3);
+                return base.volume;
+            }
+        }
+        public override double Area
+        {
+            get
+            {
+                base.area = 6 * Math.Pow(cubeSide, 2);
+                return base.area;
+            }
+        }
+        public override void DisplayShape()
+        {
+            Console.WriteLine($"Area of cube: {Area} \nVolume of cube: {Volume}");
+        }
     }
 }

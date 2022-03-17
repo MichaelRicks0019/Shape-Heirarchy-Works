@@ -26,7 +26,7 @@ namespace Shape_Heirarchy
         }
         public override void DisplayShape()
         {
-            Console.WriteLine($"Area of circle: {area}");
+            Console.WriteLine($"Area of circle: {Area}");
         }
     }
 }
